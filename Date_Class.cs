@@ -35,24 +35,32 @@ namespace Date_Class
         {
             if (date == null && time == null)
             {
-                errorMessage.Visible = true;
-                errorMessage.Text = "Please select a date and time.";
+                errorMessageLbl.Visible = true;
+                errorMessageLbl.Text = "Please select a date and time.";
             }
             else if (date == null)
             {
-                errorMessage.Visible = true;
-                errorMessage.Text = "Please select a date.";
+                errorMessageLbl.Visible = true;
+                errorMessageLbl.Text = "Please select a date.";
             }
             else if (time == null)
             {
-                errorMessage.Visible = true;
-                errorMessage.Text = "Please select a time.";
+                errorMessageLbl.Visible = true;
+                errorMessageLbl.Text = "Please select a time.";
             }
             else
             {
-                errorMessage.Visible = false;
+                errorMessageLbl.Visible = false;
                 dateTime = $"{date} {time}";
             }
+        }
+
+        private void returnBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            //WelcomePage wp = new WelcomePage();
+            //wp.ShowDialog;
+            this.Close();
         }
     }
 }

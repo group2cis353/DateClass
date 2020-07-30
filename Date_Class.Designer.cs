@@ -32,8 +32,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.nextBtn = new System.Windows.Forms.Button();
-            this.errorMessage = new System.Windows.Forms.Label();
+            this.errorMessageLbl = new System.Windows.Forms.Label();
             this.timeEntry = new System.Windows.Forms.DateTimePicker();
+            this.returnBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // dateEntry
@@ -75,15 +76,15 @@
             this.nextBtn.UseVisualStyleBackColor = true;
             this.nextBtn.Click += new System.EventHandler(this.nextBtn_Click);
             // 
-            // errorMessage
+            // errorMessageLbl
             // 
-            this.errorMessage.AutoSize = true;
-            this.errorMessage.Location = new System.Drawing.Point(353, 370);
-            this.errorMessage.Name = "errorMessage";
-            this.errorMessage.Size = new System.Drawing.Size(35, 13);
-            this.errorMessage.TabIndex = 6;
-            this.errorMessage.Text = "label3";
-            this.errorMessage.Visible = false;
+            this.errorMessageLbl.AutoSize = true;
+            this.errorMessageLbl.Location = new System.Drawing.Point(306, 328);
+            this.errorMessageLbl.Name = "errorMessageLbl";
+            this.errorMessageLbl.Size = new System.Drawing.Size(17, 13);
+            this.errorMessageLbl.TabIndex = 6;
+            this.errorMessageLbl.Text = "lbl";
+            this.errorMessageLbl.Visible = false;
             // 
             // timeEntry
             // 
@@ -97,19 +98,31 @@
             this.timeEntry.TabIndex = 7;
             this.timeEntry.ValueChanged += new System.EventHandler(this.timeEntry_ValueChanged);
             // 
+            // returnBtn
+            // 
+            this.returnBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.returnBtn.Location = new System.Drawing.Point(279, 367);
+            this.returnBtn.Name = "returnBtn";
+            this.returnBtn.Size = new System.Drawing.Size(196, 52);
+            this.returnBtn.TabIndex = 8;
+            this.returnBtn.Text = "Return to Main Page";
+            this.returnBtn.UseVisualStyleBackColor = true;
+            this.returnBtn.Click += new System.EventHandler(this.returnBtn_Click);
+            // 
             // Date_Class
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.returnBtn);
             this.Controls.Add(this.timeEntry);
-            this.Controls.Add(this.errorMessage);
+            this.Controls.Add(this.errorMessageLbl);
             this.Controls.Add(this.nextBtn);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dateEntry);
             this.Name = "Date_Class";
-            this.Text = "Form1";
+            this.Text = "Please enter date and time of entry";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -121,8 +134,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button nextBtn;
-        private System.Windows.Forms.Label errorMessage;
+        private System.Windows.Forms.Label errorMessageLbl;
         private System.Windows.Forms.DateTimePicker timeEntry;
+        private System.Windows.Forms.Button returnBtn;
     }
 }
 
